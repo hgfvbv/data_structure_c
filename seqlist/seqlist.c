@@ -39,21 +39,23 @@ int is_empty_seqlist(seqlist_t *l)
 
 int delete_data_seqlist(seqlist_t *l, datatype_t data)
 {
-	if(is_empty_seqlist(l))
-	{
+	if(is_empty_seqlist(l)) {
 		return -1;
 	}
 	int i = 0, j = 0;
 	for(i = 0; i < l->n; ++i)
 	{
-		if(l->buf[i] != data)
-		{
-			l->buf[j++] = l->buf[i];
+		if(l->buf[i] != data) {
+			// l->buf[j++] = l->buf[i];
+			l->buf[j] = l->buf[i];
+			if(i != j) {
+				l->buf[i] = 0;
+			}
+			j++;
 		}
 	}
 	l->n = j;
-	if(i == j)
-	{
+	if(i == j) {
 		return -2;
 	}else{
 		printf("\033[42;1;5mdelete %d is successful!\033[0m\n", data);
