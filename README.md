@@ -6,3 +6,4 @@
 * **seqstack 顺序栈**
 * **linkstack 链式栈**
 * **loopqueue 循环队列**
+* **linkqueue 链式队列**
