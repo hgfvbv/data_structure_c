@@ -8,3 +8,4 @@
 * **loopqueue 循环队列**
 * **linkqueue 链式队列**
 * **globalClock 球状时钟例子**
+* **binarytree 二叉树**
